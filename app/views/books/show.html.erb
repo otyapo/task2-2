@@ -1,0 +1,16 @@
+<% if flash[:notice] %>
+<p class="create"><%= flash[:notice]%></p>
+<% end %>
+<p><strong>Title:</strong>
+<%= @book.title %>
+</p>
+<p><strong>Body:</strong>
+<%= @book.body %>
+</p>
+<br>
+
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+<a>|</a>
+
+<%= link_to "Back", books_index_path(@book.id), class: "back" %>
